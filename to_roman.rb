@@ -2,6 +2,8 @@
 # C=100, XC=90, L=50, XL=40,
 # X=10, IX=9, V=5, IV=4, I=1
 require 'pry'
+
+# TAIL CALL OPTIMAZATION
 def to_roman(num, roman = "")
   return roman if num == 0
   if num >= 1000
@@ -57,6 +59,7 @@ puts '-- MCMXCIX --'
 puts to_roman(1999)  # should return "MCMXCIX"
 puts '***************'
 
+# ORDINARY RECURSION
 def to_roman(num)
   return "" if num == 0
   if num >= 1000
